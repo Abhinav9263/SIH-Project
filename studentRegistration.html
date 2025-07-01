@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarship Distribution System</title>
+    <link rel="stylesheet" href="studentRegistration.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img src="images/g20.png" alt="G20 Logo" class="logo" />
+        <div class="title">
+          <h1>Scholarship Distribution System by PMSSS</h1>
+          <h2>(Ministry of Welfare)</h2>
+        </div>
+        <img
+          src="images/Digital-india-black.jpg"
+          alt="Digital India Logo"
+          class="logo"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section class="instructions">
+        <h3><a href="#">Instructions for Registration</a></h3>
+      </section>
+      <section class="form-section">
+        <h3>Student Apply</h3>
+        <form id="applyForm" method="POST">
+          <label for="aadhar">Aadhar No :</label>
+          <input
+            type="text"
+            id="aadhar"
+            name="aadhar"
+            required
+            pattern="\d{12}"
+            title="Aadhar number must be 12 digits."
+            maxlength="12"
+          />
+
+          <label for="name">Name as per Aadhar :</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            pattern="[A-Za-z\s]+"
+            title="Name must contain only letters."
+          />
+
+          <label for="dob">D.O.B :</label>
+          <input type="date" id="dob" name="dob" required />
+
+          <label for="gender">Gender :</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="mobile">Mobile No :</label>
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            required
+            pattern="\+91\d{10}"
+            title="Mobile number must start with +91 and be followed by 10 digits."
+            maxlength="13"
+          />
+
+          <div class="checkbox-section">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent">I agree to the below consents</label>
+          </div>
+          <div class="consent-details">
+            <p>Use my Aadhar details to authenticate me from UIDAI.</p>
+            <p>
+              Use my mobile number for sending SMS alerts to me for the seeding
+              process.
+            </p>
+          </div>
+
+          <div id="recaptcha-container"></div>
+
+          <button type="button" id="send-otp" disabled>Send OTP</button>
+
+          <label for="otp">Enter OTP :</label>
+          <input type="text" id="otp" name="otp" required />
+
+          <button type="button" id="verify-otp">Verify OTP</button>
+        </form>
+        
+        <!-- Skip Button -->
+        <div class="skip-button">
+          <button type="button" onclick="window.location.href='applicationForm.html'">Skip</button>
+        </div>
+
+      </section>
+    </main>
+    <footer>
+      <p>Powered By BinaryExecutor's © all rights are reserved</p>
+    </footer>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+
+    <!-- Firebase Initialization and OTP Script -->
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/firebase-auth.js"></script>
+    <script type="module" src="js/studentRegistration.js"></script>
+  </body>
+</html>

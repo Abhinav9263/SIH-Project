@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.warning {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #219150;
+}
+
+span {
+  color: red;
+}
+
+/* Section Box */
+.section-box {
+  padding: 10px;
+  background-color: #f1f8e9;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #bdbdbd;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Radio and Checkbox Styles */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Upload Section Styles */
+.upload-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.upload-item {
+  background-color: #e3f2fd;
+  padding: 15px;
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.upload-item:hover {
+  background-color: #bbdefb;
+}
+
+.upload-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.upload-item input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #90caf9;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.upload-item input[type="file"]:hover {
+  border-color: #42a5f5;
+}
+
+/* Section Box */
+.section-box {
+  padding: 10px;
+  background-color: #f1f8e9;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}

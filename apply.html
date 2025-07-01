@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+    <link rel="stylesheet" href="apply.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>आवेदक का विवरण / Details of Applicant</h1>
+
+      <!-- Form Tag with enctype for file uploads -->
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+        <!-- Gender Section -->
+        <div class="form-group">
+          <label for="gender">लिंग / Gender *</label>
+          <div class="gender-options">
+            <label
+              ><input type="radio" id="male" name="gender" value="male" /> पुरुष
+              / Male</label
+            >
+            <label
+              ><input type="radio" id="female" name="gender" value="female" />
+              स्त्री / Female</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="third-gender"
+                name="gender"
+                value="third-gender"
+              />
+              तृतीय लिंग / Third Gender</label
+            >
+          </div>
+        </div>
+
+        <!-- Applicant Details -->
+        <div class="form-group">
+          <label for="applicant-name"
+            >आवेदक / आवेदिका का नाम / Applicant's Name *</label
+          >
+          <input
+            type="text"
+            id="applicant-name"
+            name="applicant-name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="father-name">पिता का नाम / Father's Name *</label>
+          <input type="text" id="father-name" name="father-name" required />
+        </div>
+        <div class="form-group">
+          <label for="mother-name">माता का नाम / Mother's Name *</label>
+          <input type="text" id="mother-name" name="mother-name" required />
+        </div>
+        <div class="form-group">
+          <label for="husband-name">पति का नाम / Husband's Name</label>
+          <input type="text" id="husband-name" name="husband-name" />
+        </div>
+
+        <!-- Contact Information -->
+        <div class="form-group">
+          <label for="mobile-no"
+            >आवेदक का मोबाइल संख्या / Mobile No. of Applicant *</label
+          >
+          <input type="text" id="mobile-no" name="mobile-no" required />
+        </div>
+        <div class="form-group">
+          <label for="email">आवेदक का ईमेल / Email of Applicant *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <!-- Permanent Address -->
+        <h2>स्थाई पता / Permanent Address</h2>
+        <div class="form-group">
+          <label for="state">राज्य / State *</label>
+          <select id="state" name="state" required>
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sub-division">अनुमंडल / Sub-Division *</label>
+          <select id="sub-division" name="sub-division" required>
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+
+        <!-- More Address Details -->
+        <div class="form-group">
+          <label for="local-body"
+            >स्थानीय निकाय का प्रकार / Type of Local Body *</label
+          >
+          <div class="local-body-options">
+            <label
+              ><input
+                type="radio"
+                id="village-panchayat"
+                name="local-body"
+                value="village-panchayat"
+              />
+              ग्राम पंचायत / Village Panchayat</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="municipal-corporation"
+                name="local-body"
+                value="municipal-corporation"
+              />
+              नगर निगम / Municipal Corporation</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="municipality"
+                name="local-body"
+                value="municipality"
+              />
+              नगर परिषद / Municipality</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="town-panchayat"
+                name="local-body"
+                value="town-panchayat"
+              />
+              नगर पंचायत / Town Panchayat</label
+            >
+          </div>
+        </div>
+
+        <!-- Other Address Information -->
+        <div class="form-group">
+          <label for="village-town">ग्राम / मोहल्ला / Village / Town</label>
+          <input type="text" id="village-town" name="village-town" />
+        </div>
+        <div class="form-group">
+          <label for="police-station">थाना / Police Station *</label>
+          <select id="police-station" name="police-station" required>
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="district">जिला / District *</label>
+          <select id="district" name="district" required>
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="block">प्रखंड / Block *</label>
+          <select id="block" name="block" required>
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ward-number">वार्ड संख्या / Ward Number</label>
+          <input type="text" id="ward-number" name="ward-number" />
+        </div>
+        <div class="form-group">
+          <label for="post-office">डाक घर / Post Office *</label>
+          <input type="text" id="post-office" name="post-office" required />
+        </div>
+        <div class="form-group">
+          <label for="pin-code">पिन कोड / Pin Code *</label>
+          <input type="text" id="pin-code" name="pin-code" required />
+        </div>
+        <div class="form-group">
+          <label for="aadhaar-number">आधार संख्या / Aadhaar Number</label>
+          <input type="text" id="aadhaar-number" name="aadhaar-number" />
+        </div>
+
+        <!-- Present Address -->
+        <h2>वर्तमान पता / Present Address</h2>
+        <div class="form-group">
+          <input type="checkbox" id="same-as-above" name="same-as-above" />
+          <label for="same-as-above">ऊपर के जैसा / Same as above</label>
+        </div>
+
+        <!-- Same Address Fields -->
+        <div class="form-group">
+          <label for="present-state">राज्य / State *</label>
+          <select id="present-state" name="present-state" required>
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="present-sub-division">अनुमंडल / Sub-Division *</label>
+          <select
+            id="present-sub-division"
+            name="present-sub-division"
+            required
+          >
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+
+        <!-- More Fields for Address -->
+        <div class="form-group">
+          <label for="present-local-body"
+            >स्थानीय निकाय का प्रकार / Type of Local Body *</label
+          >
+          <div class="local-body-options">
+            <label
+              ><input
+                type="radio"
+                id="present-village-panchayat"
+                name="present-local-body"
+                value="village-panchayat"
+              />
+              ग्राम पंचायत / Village Panchayat</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="present-municipal-corporation"
+                name="present-local-body"
+                value="municipal-corporation"
+              />
+              नगर निगम / Municipal Corporation</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="present-municipality"
+                name="present-local-body"
+                value="municipality"
+              />
+              नगर परिषद / Municipality</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="present-town-panchayat"
+                name="present-local-body"
+                value="town-panchayat"
+              />
+              नगर पंचायत / Town Panchayat</label
+            >
+          </div>
+        </div>
+
+        <!-- Remaining Form Fields -->
+        <div class="form-group">
+          <label for="present-village-town"
+            >ग्राम / मोहल्ला / Village / Town</label
+          >
+          <input
+            type="text"
+            id="present-village-town"
+            name="present-village-town"
+          />
+        </div>
+        <div class="form-group">
+          <label for="present-police-station">थाना / Police Station *</label>
+          <select
+            id="present-police-station"
+            name="present-police-station"
+            required
+          >
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="present-district">जिला / District *</label>
+          <select id="present-district" name="present-district" required>
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="present-block">प्रखंड / Block *</label>
+          <select id="present-block" name="present-block" required>
+            <option value="">Please Select</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="present-ward-number">वार्ड संख्या / Ward Number</label>
+          <input
+            type="text"
+            id="present-ward-number"
+            name="present-ward-number"
+          />
+        </div>
+        <div class="form-group">
+          <label for="present-post-office">डाक घर / Post Office *</label>
+          <input
+            type="text"
+            id="present-post-office"
+            name="present-post-office"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="present-pin-code">पिन कोड / Pin Code *</label>
+          <input
+            type="text"
+            id="present-pin-code"
+            name="present-pin-code"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="present-aadhaar-number"
+            >आधार संख्या / Aadhaar Number</label
+          >
+          <input
+            type="text"
+            id="present-aadhaar-number"
+            name="present-aadhaar-number"
+          />
+        </div>
+
+        <!-- File Upload Section -->
+        <h2>दस्तावेज़ अपलोड करें / Upload Documents</h2>
+        <div class="form-group">
+          <label for="documents"
+            >PDF फ़ाइलें अपलोड करें (अधिकतम 5) / Upload PDF Files (Max 5)</label
+          >
+          <input
+            type="file"
+            id="documents"
+            name="documents[]"
+            accept="application/pdf"
+            multiple
+            required
+          />
+          <small>अधिकतम 5 फ़ाइलें अपलोड करें / Upload up to 5 files</small>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit">सबमिट करें / Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

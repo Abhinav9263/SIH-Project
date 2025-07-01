@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarship Distribution System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Existing content -->
+    <header class="header">
+      <div class="header-left">
+        <img src="images/g20.png" alt="" class="header-logo" />
+      </div>
+      <div class="header-center">
+        <h1>Scholarship Distribution System by PMSSS</h1>
+        <h2>(Ministry of Welfare)</h2>
+      </div>
+      <div class="header-right">
+        <img
+          src="images/Digital-india-black.jpg"
+          alt=""
+          class="header-logo"
+        />
+      </div>
+    </header>
+
+    <nav class="navigation">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="officialLogin.html">Official Login</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Service Related Info</a></li>
+        <li><a href="#">[Shortcut Keys]</a></li>
+        <li class="text-size-controls">
+          <span>Text Size: </span>
+          <button id="textIncrease">A+</button>
+          <button id="textDefault">A</button>
+          <button id="textDecrease">A-</button>
+        </li>
+      </ul>
+    </nav>
+
+
+    <marquee class="news-ticker"
+      >Latest News: news will reflect here news will reflect here news will
+      reflect here news will reflect here</marquee
+    >
+
+    <main class="main-content">
+      <section class="welcome-section">
+        <h3>Welcome</h3>
+        <p>
+          The Welfare Department runs various schemes for the welfare of
+          backward classes and the SC/ST. A step towards achieving speedy,
+          transparent & accountable governance. The system links all welfare
+          departments, treasury, databases of Secondary Schools Certificate
+          (SSC), colleges, and banks to disburse scholarships. Processing of
+          students' applications for scholarships, sanctioning, and passing of
+          bills for disbursement are enabled in the system.
+        </p>
+      </section>
+
+      <section class="buttons-section">
+        <div class="option-box">
+          <button
+            class="option-button"
+            onclick="window.location.href='studentRegistration.html'"
+          >
+            Apply for Scholarship
+          </button>
+        </div>
+        <div class="option-box">
+          <button
+            class="option-button"
+            onclick="window.location.href='studentLogin.html'"
+          >
+            Student Login
+          </button>
+        </div>
+        <div class="option-box">
+          <button
+            class="option-button"
+            onclick="window.location.href='applicationTracking.html'"
+          >
+            Track Application
+          </button>
+        </div>
+        <div class="option-box">
+          <button class="option-button">Update Application</button>
+          <span class="new-badge">New</span>
+        </div>
+
+
+
+      </section>
+
+      
+
+      <section class="notice-board">
+        <h3>Notice</h3>
+        <p>Important notices will reflect here.</p>
+      </section>
+    </main>
+
+    <!-- Help Bot Section -->
+    <div id="chatbot-container" class="chatbot-container">
+      <div id="chatbot-header" class="chatbot-header">
+        <span>Need Help?</span>
+        <button id="close-chatbot" onclick="toggleChatbot()">X</button>
+      </div>
+      <div id="chatbot-body" class="chatbot-body">
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <input
+          type="text"
+          id="chatbot-input"
+          placeholder="Type your question here..."
+        />
+        <button id="send-message" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+    <button id="open-chatbot" onclick="toggleChatbot()">Chat with us!</button>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <p>Contact Us: xyz@gmail.com</p>
+      </div>
+      <div class="footer-center">
+        <p>Powered By BinaryExecutor's © All rights reserved</p>
+      </div>
+      <div class="footer-right">
+        <p>Reach Us: <a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+      </div>
+    </footer>
+
+    <script src="chatbot.js"></script>
+  </body>
+</html>

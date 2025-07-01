@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarship Distribution System - Login</title>
+    <link rel="stylesheet" href="find.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/goi logo.png" alt="Government Logo" class="govt-logo" />
+      <h1>Scholarship Distribution System by PMSSS</h1>
+      <h2>(Ministry of Welfare)</h2>
+    </header>
+
+    <div class="login-container">
+      <h3>Find Application</h3>
+      <form id="loginForm">
+        <input
+          type="text"
+          id="mobileNumber"
+          placeholder="Registered Mobile Number"
+          required
+        />
+        <input type="text" id="dob" placeholder="DD/MM/YY" required />
+        <div class="captcha">
+          <input type="checkbox" id="notARobot" required />
+          <label for="notARobot">I'm not a robot</label>
+        </div>
+        <button type="submit" id="loginButton">Find Application</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>Powered By <strong>BinaryExecutor's</strong></p>
+      <p>@all rights are reserved</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

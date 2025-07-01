@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarship Login</title>
+    <link rel="stylesheet" href="studentLogin.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Scholarship Distribution System by PMSSS</h1>
+      <h2>(Ministry of Welfare)</h2>
+
+      <div class="login-form">
+        <h3>Student Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="reference-number">Application Reference Number:</label>
+            <input
+              type="text"
+              id="reference-number"
+              name="reference-number"
+              required
+            />
+            <a href="find.html" class="forgot-link"
+              >Forgot application number?</a
+            >
+          </div>
+          <div class="form-group">
+            <label for="date">Date (DD/MM/YY):</label>
+            <input type="text" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <div class="recaptcha">
+              <input type="checkbox" id="recaptcha" name="recaptcha" />
+              <label for="recaptcha">I'm not a robot</label>
+              <img src="" alt="reCAPTCHA icon" />
+            </div>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <div class="footer">
+        <p>Powered By</p>
+        <p>BinaryExecutor's</p>
+        <p>@all rights are reserved</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted</title>
+    <style>
+        body {
+            background-color: #2E0068;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: #E5E5E5;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            color: #000;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #00A000;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .success-icon:before {
+            content: '\2714';
+            font-size: 50px;
+            color: white;
+            line-height: 80px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .back-button {
+            background-color: #FFC300;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #e6b000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon"></div>
+        <h1>Congratulations,</h1>
+        <p>Your form has been submitted successfully.</p>
+        <p>Your Reference No. is <strong>XXXXXX</strong> for PMSSS scholarship application. Please keep the Reference number for further use. You may print your application through Student Login.</p>
+        <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+    </div>
+</body>
+</html>

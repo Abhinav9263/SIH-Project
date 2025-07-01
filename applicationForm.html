@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMSSS Scholarship Application Form</title>
+    <link rel="stylesheet" href="applicationForm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Application Form For PMSSS Scholarship</h1>
+      <p class="warning">
+        **Please be careful while filling the Application details.**
+      </p>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+        <!-- Personnel Details Section -->
+        <div class="section-box">
+          <div class="section">
+            <h2>Personnel Details</h2>
+            <div class="form-group">
+              <label for="candidate-name"
+                >Candidate’s Name (As per Aadhar)<span>*</span></label
+              >
+              <input
+                type="text"
+                id="candidate-name"
+                name="candidate_name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="father-name">Father’s Name<span>*</span></label>
+              <input type="text" id="father-name" name="father_name" required />
+            </div>
+            <div class="form-group">
+              <label for="mother-name">Mother’s Name<span>*</span></label>
+              <input type="text" id="mother-name" name="mother_name" required />
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth<span>*</span></label>
+              <input type="date" id="dob" name="dob" required />
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender<span>*</span></label>
+              <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label
+                >Do you belong to any reserved category?<span>*</span></label
+              >
+              <div class="radio-group">
+                <label
+                  ><input
+                    type="radio"
+                    name="reserved_category"
+                    value="yes"
+                    required
+                  />
+                  Yes</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="reserved_category"
+                    value="no"
+                    required
+                  />
+                  No</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label>If yes, then select the category code<span>*</span></label>
+              <div class="checkbox-group">
+                <label
+                  ><input type="checkbox" name="category_code[]" value="ews" />
+                  EWS</label
+                >
+                <label
+                  ><input type="checkbox" name="category_code[]" value="sc" />
+                  SC</label
+                >
+                <label
+                  ><input type="checkbox" name="category_code[]" value="st" />
+                  ST</label
+                >
+                <label
+                  ><input type="checkbox" name="category_code[]" value="ebc" />
+                  EBC</label
+                >
+                <label
+                  ><input type="checkbox" name="category_code[]" value="bc" />
+                  BC</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email ID<span>*</span></label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="income"
+                >Total Family Income (Annually)<span>*</span></label
+              >
+              <input type="number" id="income" name="income" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bank Details Section -->
+        <div class="section-box">
+          <div class="section">
+            <h2>Bank Details</h2>
+            <div class="form-group">
+              <label for="account-number"
+                >Bank Account Number<span>*</span></label
+              >
+              <input
+                type="text"
+                id="account-number"
+                name="account_number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirm-account-number"
+                >Confirm Bank Account Number<span>*</span></label
+              >
+              <input
+                type="text"
+                id="confirm-account-number"
+                name="confirm_account_number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="ifsc-code">IFSC Code<span>*</span></label>
+              <input type="text" id="ifsc-code" name="ifsc_code" required />
+            </div>
+            <div class="form-group">
+              <label for="branch-name">Branch Name<span>*</span></label>
+              <input type="text" id="branch-name" name="branch_name" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Details Section -->
+        <div class="section-box">
+          <div class="section">
+            <h2>Academic Details</h2>
+            <div class="form-group">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Exam Passed</th>
+                    <th>Examination Board/University</th>
+                    <th>Year of Passing</th>
+                    <th>Full Marks</th>
+                    <th>Obtained</th>
+                    <th>Percentage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" name="matric_exam" required /></td>
+                    <td><input type="text" name="matric_board" required /></td>
+                    <td><input type="text" name="matric_year" required /></td>
+                    <td>
+                      <input type="text" name="matric_full_marks" required />
+                    </td>
+                    <td>
+                      <input type="text" name="matric_obtained" required />
+                    </td>
+                    <td>
+                      <input type="text" name="matric_percentage" required />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="intermediate_exam" required />
+                    </td>
+                    <td>
+                      <input type="text" name="intermediate_board" required />
+                    </td>
+                    <td>
+                      <input type="text" name="intermediate_year" required />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="intermediate_full_marks"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="intermediate_obtained"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="intermediate_percentage"
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Address Details Section -->
+        <div class="section-box">
+          <div class="section">
+            <h2>Address Details</h2>
+            <div class="form-group">
+              <label for="address-1">Address Lane 1<span>*</span></label>
+              <input type="text" id="address-1" name="address_1" required />
+            </div>
+            <div class="form-group">
+              <label for="address-2">Address Lane 2</label>
+              <input type="text" id="address-2" name="address_2" />
+            </div>
+            <div class="form-group">
+              <label for="address-3">Address Lane 3</label>
+              <input type="text" id="address-3" name="address_3" />
+            </div>
+            <div class="form-group">
+              <label for="city">City<span>*</span></label>
+              <input type="text" id="city" name="city" required />
+            </div>
+            <div class="form-group">
+              <label for="state">State<span>*</span></label>
+              <select id="state" name="state" required>
+                <option value="">Select</option>
+                <!-- Add state options -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip Code<span>*</span></label>
+              <input type="text" id="zip" name="zip" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Document Uploads Section -->
+        <div class="section-box">
+          <div class="section">
+            <h2>Document Uploads</h2>
+            <div class="upload-grid">
+              <div class="upload-item">
+                <label for="photo-upload">Upload Photo<span>*</span></label>
+                <input
+                  type="file"
+                  id="photo-upload"
+                  name="photo_upload"
+                  accept="image/*"
+                  required
+                />
+              </div>
+              <div class="upload-item">
+                <label for="signature-upload"
+                  >Upload Signature<span>*</span></label
+                >
+                <input
+                  type="file"
+                  id="signature-upload"
+                  name="signature_upload"
+                  accept="image/*"
+                  required
+                />
+              </div>
+              <div class="upload-item">
+                <label for="photo-scan"
+                  >Scanned Photograph of Candidate<span>*</span></label
+                >
+                <input
+                  type="file"
+                  id="photo-scan"
+                  name="photo_scan"
+                  accept="image/*"
+                  required
+                />
+              </div>
+              <div class="upload-item">
+                <label for="aadhaar-scan"
+                  >Scanned Aadhaar Card<span>*</span></label
+                >
+                <input
+                  type="file"
+                  id="aadhaar-scan"
+                  name="aadhaar_scan"
+                  accept="image/*"
+                  required
+                />
+              </div>
+              <div class="upload-item">
+                <label for="marksheet-upload"
+                  >Matriculation Certificate/Marksheet<span>*</span></label
+                >
+                <input
+                  type="file"
+                  id="marksheet-upload"
+                  name="marksheet_upload"
+                  required
+                />
+              </div>
+              <div class="upload-item">
+                <label for="intermediate-upload"
+                  >Intermediate Certificate/Marksheet<span>*</span></label
+                >
+                <input
+                  type="file"
+                  id="intermediate-upload"
+                  name="intermediate_upload"
+                  required
+                />
+              </div>
+              <div class="upload-item">
+                <label for="caste-certificate-upload"
+                  >Caste Category Certificate<span>*</span></label
+                >
+                <input
+                  type="file"
+                  id="caste-certificate-upload"
+                  name="caste_certificate_upload"
+                  required
+                />
+              </div>
+              <div class="upload-item">
+                <label for="income-certificate-upload"
+                  >Income Certificate<span>*</span></label
+                >
+                <input
+                  type="file"
+                  id="income-certificate-upload"
+                  name="income_certificate_upload"
+                  required
+                />
+              </div>
+              <div class="upload-item">
+                <label for="other-upload">Other</label>
+                <input type="file" id="other-upload" name="other_upload" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <input type="submit" value="Submit Application" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

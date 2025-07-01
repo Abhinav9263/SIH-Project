@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.logo {
+  height: 90px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  display: block;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.instructions {
+  flex: 1;
+  background-color: #ffd700;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.instructions h3 a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #00008b;
+  padding: 40px;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.form-section h3 {
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.consent-details {
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #00ff00;
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #32cd32;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+.skip-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.skip-button button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.skip-button button:hover {
+    background-color: #0056b3;
+}

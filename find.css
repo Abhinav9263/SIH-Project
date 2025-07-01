@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.govt-logo {
+  height: 80px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 18px;
+  color: #555;
+}
+
+.login-container {
+  background-color: #2e2a4d;
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  width: 300px;
+}
+
+.login-container h3 {
+  color: #efefef;
+  margin-bottom: 40px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.captcha {
+  margin-bottom: 20px;
+  text-align: left;
+  color: #ffffff;
+}
+
+button {
+  background-color: #f9c300;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e0a700;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 12px;
+}
